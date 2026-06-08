@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallcraft — Premium Wallpapers for Desktop & Mobile</title>
+    <meta name="description" content="Discover stunning high-resolution wallpapers for your desktop and mobile devices. Browse thousands of curated wallpapers from nature, abstract, minimal, dark and more categories.">
+    <meta name="keywords" content="wallpapers, desktop wallpapers, mobile wallpapers, HD wallpapers, 4K wallpapers, free wallpapers">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#a855f7"/>
+                            <stop offset="100%" stop-color="#6366f1"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+                    <path d="M8 22L12 10L16 18L20 12L24 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Wallcraft</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#" class="nav-link active" data-category="all" id="nav-all">Explore</a>
+                <a href="#" class="nav-link" data-category="nature" id="nav-nature">Nature</a>
+                <a href="#" class="nav-link" data-category="abstract" id="nav-abstract">Abstract</a>
+                <a href="#" class="nav-link" data-category="minimal" id="nav-minimal">Minimal</a>
+                <a href="#" class="nav-link" data-category="dark" id="nav-dark">Dark</a>
+                <a href="#" class="nav-link" data-category="space" id="nav-space">Space</a>
+            </div>
+            <div class="nav-actions">
+                <div class="device-toggle" id="device-toggle">
+                    <button class="toggle-btn active" data-device="desktop" id="toggle-desktop" title="Desktop wallpapers">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </button>
+                    <button class="toggle-btn" data-device="mobile" id="toggle-mobile" title="Mobile wallpapers">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                Powered by Pexels
+            </div>
+            <h1 class="hero-title">
+                Stunning Wallpapers<br>
+                <span class="gradient-text">for Every Screen</span>
+            </h1>
+            <p class="hero-subtitle">
+                Discover thousands of handpicked, high-resolution wallpapers for your desktop and mobile. Free to download.
+            </p>
+            <div class="search-container" id="search-container">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" class="search-input" id="search-input" placeholder="Search wallpapers... nature, abstract, city, dark..." autocomplete="off">
+                    <button class="search-btn" id="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-tags" id="search-tags">
+                    <button class="search-tag" data-query="mountains">🏔️ Mountains</button>
+                    <button class="search-tag" data-query="ocean sunset">🌅 Ocean</button>
+                    <button class="search-tag" data-query="neon city">🌃 Neon</button>
+                    <button class="search-tag" data-query="flowers macro">🌸 Flowers</button>
+                    <button class="search-tag" data-query="aurora borealis">🌌 Aurora</button>
+                    <button class="search-tag" data-query="minimalist texture">✨ Texture</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="7 13 12 18 17 13"/>
+                <polyline points="7 6 12 11 17 6"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <main class="gallery-section" id="gallery-section">
+        <div class="gallery-header">
+            <div class="gallery-info">
+                <h2 class="gallery-title" id="gallery-title">Trending Wallpapers</h2>
+                <p class="gallery-count" id="gallery-count"></p>
+            </div>
+            <div class="gallery-controls">
+                <div class="color-filters" id="color-filters">
+                    <button class="color-dot active" data-color="" title="All colors" style="background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #9b59b6);"></button>
+                    <button class="color-dot" data-color="red" title="Red" style="background: #ef4444;"></button>
+                    <button class="color-dot" data-color="orange" title="Orange" style="background: #f97316;"></button>
+                    <button class="color-dot" data-color="yellow" title="Yellow" style="background: #eab308;"></button>
+                    <button class="color-dot" data-color="green" title="Green" style="background: #22c55e;"></button>
+                    <button class="color-dot" data-color="turquoise" title="Turquoise" style="background: #06b6d4;"></button>
+                    <button class="color-dot" data-color="blue" title="Blue" style="background: #3b82f6;"></button>
+                    <button class="color-dot" data-color="violet" title="Violet" style="background: #8b5cf6;"></button>
+                    <button class="color-dot" data-color="pink" title="Pink" style="background: #ec4899;"></button>
+                    <button class="color-dot" data-color="white" title="White" style="background: #f8fafc;"></button>
+                    <button class="color-dot" data-color="black" title="Black" style="background: #1e293b; border: 2px solid #334155;"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="masonry-grid" id="masonry-grid">
+            <!-- Cards will be injected here -->
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading-container" id="loading-container">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-text">Loading stunning wallpapers...</p>
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="no-results" style="display: none;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="8" y1="8" x2="14" y2="14"/>
+                <line x1="14" y1="8" x2="8" y2="14"/>
+            </svg>
+            <h3>No wallpapers found</h3>
+            <p>Try a different search term or category</p>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-container" id="load-more-container" style="display: none;">
+            <button class="load-more-btn" id="load-more-btn">
+                <span>Load More Wallpapers</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="7 13 12 18 17 13"/>
+                    <polyline points="7 6 12 11 17 6"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <!-- Image Preview Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close" aria-label="Close preview">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="modal-content">
+                <div class="modal-image-container" id="modal-image-container">
+                    <img class="modal-image" id="modal-image" alt="Wallpaper preview" loading="lazy">
+                    <div class="modal-image-loader" id="modal-image-loader">
+                        <div class="spinner-ring"></div>
+                    </div>
+                </div>
+                <div class="modal-sidebar" id="modal-sidebar">
+                    <div class="modal-photographer">
+                        <div class="photographer-avatar" id="photographer-avatar"></div>
+                        <div class="photographer-info">
+                            <span class="photographer-label">Photographer</span>
+                            <h3 class="photographer-name" id="photographer-name"></h3>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            <span id="detail-resolution"></span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span id="detail-aspect">—</span>
+                        </div>
+                        <div class="detail-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span>Free Download</span>
+                        </div>
+                    </div>
+                    <div class="modal-color-palette" id="modal-color-palette">
+                        <span class="palette-label">Dominant Color</span>
+                        <div class="palette-swatch" id="palette-swatch"></div>
+                    </div>
+                    <div class="download-section">
+                        <h4 class="download-title">Download Size</h4>
+                        <div class="download-options" id="download-options">
+                            <!-- Download buttons injected here -->
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="pexels-link" id="pexels-link">
+                        View on Pexels
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                        <defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#6366f1"/></linearGradient></defs>
+                        <rect width="32" height="32" rx="8" fill="url(#logoGrad2)"/>
+                        <path d="M8 22L12 10L16 18L20 12L24 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Wallcraft</span>
+                </a>
+                <p class="footer-desc">Beautiful, high-resolution wallpapers for every device. Powered by the Pexels API.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wallcraft. Photos provided by <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="17 11 12 6 7 11"/>
+            <line x1="12" y1="6" x2="12" y2="18"/>
+        </svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
