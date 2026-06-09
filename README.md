@@ -1,5 +1,9 @@
 # 🎨 Wallcraft — Premium Wallpaper Website
 
+[![Deploy to GitHub Pages](https://github.com/Abhra-18/wallcraft/actions/workflows/deploy.yml/badge.svg)](https://github.com/Abhra-18/wallcraft/actions/workflows/deploy.yml)
+
+🌐 **Live Site: [abhra-18.github.io/wallcraft](https://abhra-18.github.io/wallcraft/)**
+
 A stunning wallpaper browsing website for desktop and mobile, powered by the **Pexels API**.
 
 ## ✨ Features
@@ -18,7 +22,7 @@ A stunning wallpaper browsing website for desktop and mobile, powered by the **P
 ## 🚀 Getting Started
 
 1. Get a free API key from [pexels.com/api](https://www.pexels.com/api/)
-2. Open `index.html` in your browser
+2. Open the live site or `index.html` locally
 3. Paste your API key in the welcome modal
 4. Browse, search, and download wallpapers!
 
